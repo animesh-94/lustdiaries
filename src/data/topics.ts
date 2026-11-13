@@ -13,6 +13,7 @@ export interface WellnessTopic {
   slug: string;
   title: string;
   shortTagline: string;
+  externalUrl?: string;
   image: string;
   imageAlt: string;
   readTime: string;
@@ -21,6 +22,22 @@ export interface WellnessTopic {
   keyTakeaways: string[];
   sections: TopicSection[];
   faqs: TopicFaq[];
+}
+
+export const TOPIC_REDIRECT_URLS: Record<string, string> = {
+  "erectile-dysfunction": "https://staminnite.com/mens-health/",
+  "sleep-issues": "https://staminnite.com/sleeping-pills/",
+  "stress-and-tension": "https://staminnite.com/wakefulness/",
+  "pain-management": "https://staminnite.com/pain-killers/",
+  "intimate-wellness": "https://staminnite.com/mens-health/",
+};
+
+export function getTopicHref(slug: string): string {
+  return TOPIC_REDIRECT_URLS[slug] ?? `/topics/${slug}`;
+}
+
+export function isExternalHref(href: string): boolean {
+  return href.startsWith("http://") || href.startsWith("https://");
 }
 
 export const WELLNESS_TOPICS: WellnessTopic[] = [

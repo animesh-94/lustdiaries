@@ -3,6 +3,7 @@ import { BrandMark } from "./BrandMark";
 
 const FOOTER_LINKS = [
   { href: "/about", label: "About Us" },
+  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact Us" },
   { href: "/privacy-policy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms & Conditions" },

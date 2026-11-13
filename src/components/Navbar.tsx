@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Menu, X } from "lucide-react";
 import { BrandMark } from "./BrandMark";
@@ -9,10 +10,13 @@ import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
   { href: "/about", label: "About Us" },
+  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact Us" },
 ];
 
 export function Navbar() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -26,10 +30,13 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-300",
+        "top-0 inset-x-0 z-50 w-full transition-all duration-300",
+        isHome ? "fixed" : "sticky",
         scrolled
-          ? "bg-[#FDFBFE]/90 backdrop-blur-md border-b border-[#E7DAF1]/80 shadow-[0_6px_24px_-12px_rgba(67,16,89,0.12)]"
-          : "bg-[#FDFBFE]/95 border-b border-transparent"
+          ? "bg-[#FDFBFE]/92 backdrop-blur-md border-b border-[#E7DAF1]/80 shadow-[0_6px_24px_-12px_rgba(67,16,89,0.12)]"
+          : isHome
+            ? "bg-transparent border-b border-transparent"
+            : "bg-[#FDFBFE]/95 backdrop-blur-sm border-b border-[#E7DAF1]/60"
       )}
     >
       <div className="mx-auto flex h-16 sm:h-[72px] max-w-6xl items-center justify-between px-5 sm:px-8">
