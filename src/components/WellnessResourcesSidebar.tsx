@@ -18,18 +18,25 @@ interface SidebarResource {
 
 const SIDEBAR_RESOURCES: SidebarResource[] = [
   {
-    slug: "intimate-wellness",
-    title: "Intimate Wellness",
-    subtitle: "Build confidence",
-    image: "/images/topic-ed.jpg",
-    alt: "Couple holding hands warmly in support",
+    slug: "relationship-issues",
+    title: "Relationship Issues",
+    subtitle: "Build connection",
+    image: "/images/topic-relationship.jpg",
+    alt: "Couple watching a golden sunset together by the ocean",
   },
   {
     slug: "sleep-issues",
-    title: "Sleep Health",
+    title: "Sleep Issues",
     subtitle: "Sleep better",
     image: "/images/topic-sleep.jpg",
     alt: "Couple sleeping peacefully in soft morning light",
+  },
+  {
+    slug: "stress-and-tension",
+    title: "Stress & Tension",
+    subtitle: "Feel calm",
+    image: "/images/topic-stress.jpg",
+    alt: "Thoughtful man seated at desk resting head on hand",
   },
   {
     slug: "pain-management",
@@ -38,13 +45,6 @@ const SIDEBAR_RESOURCES: SidebarResource[] = [
     image: "/images/topic-pain.jpg",
     alt: "Person holding lower back in calm neutral light",
     hasPainGlow: true,
-  },
-  {
-    slug: "stress-and-tension",
-    title: "Stress & Tension",
-    subtitle: "Feel calm",
-    image: "/images/topic-stress.jpg",
-    alt: "Thoughtful man seated at desk resting head on hand",
   },
 ];
 
@@ -82,7 +82,7 @@ export function WellnessResourcesSidebar({
             Wellness Resources
           </h2>
           <p className="mt-2.5 text-[0.9rem] leading-snug text-[#4E4458]">
-            Get helpful guidance on intimacy, sleep and overall well-being.
+            Get helpful guidance on relationships, sleep, stress and pain relief.
           </p>
           {/* Curved lilac brush stroke below subtitle */}
           <svg

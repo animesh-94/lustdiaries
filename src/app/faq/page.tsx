@@ -37,53 +37,14 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Why does the site feature curated wellness resource links?",
         answer:
-          "To keep our educational wellness guides free to read, LustDiaries partners with clearly labeled wellness resources and advertising slots covering men's health, sleep, wakefulness, and pain care.",
-      },
-    ],
-  },
-  {
-    title: "Intimacy, Confidence & Men's Wellness",
-    description:
-      "Common questions around erectile confidence, responsive desire, and open partner communication.",
-    items: [
-      {
-        question: "Is occasional erectile difficulty normal?",
-        answer:
-          "Yes. Everyday stress, poor sleep, exhaustion, or distraction can cause temporary changes at any age. When patterns persist over several weeks, speaking confidentially with a healthcare professional helps identify vascular, hormonal, or lifestyle factors.",
-      },
-      {
-        question: "How can couples reduce performance pressure during intimacy?",
-        answer:
-          "Shifting focus toward relaxed physical affection, unhurried pacing, and reassuring communication outside the bedroom removes pressure and helps restore natural confidence.",
-      },
-      {
-        question: "Where can I explore dedicated Intimate & Men's Wellness resources?",
-        answer:
-          "Click the Erectile Dysfunction or Intimate Wellness cards on the homepage—or use the Explore Our Wellness Resources panel on the right—to visit dedicated men's health guidance.",
-      },
-    ],
-  },
-  {
-    title: "Sleep, Stress & Pain Management",
-    description:
-      "How restorative rest, nervous-system calm, and physical comfort reinforce daily well-being.",
-    items: [
-      {
-        question: "How do poor sleep and chronic stress affect relationships?",
-        answer:
-          "Sleep debt and elevated cortisol lower emotional patience, drain physical energy, and suppress natural desire. Simple wind-down routines and 60-second breathing resets can noticeably improve mood and closeness.",
-      },
-      {
-        question: "What helps ease everyday lower-back stiffness or tension?",
-        answer:
-          "Taking short movement breaks every 45 minutes of sitting, gentle daily mobility stretches, and supportive sleep posture reduce muscular guarding. Sudden radiating pain or numbness should always be evaluated by a doctor.",
+          "To keep our educational wellness guides free to read, LustDiaries partners with clearly labeled wellness resources and advertising slots covering sleep issues, stress relief, pain management, and relationships.",
       },
     ],
   },
   {
     title: "Relationships & Communication",
     description:
-      "Practical ways to navigate conflict cycles and rebuild emotional connection.",
+      "Practical ways to navigate conflict cycles, strengthen trust, and rebuild emotional connection.",
     items: [
       {
         question: "What can we do when small disagreements keep escalating?",
@@ -94,6 +55,40 @@ const FAQ_CATEGORIES: FaqCategory[] = [
         question: "When should couples consider extra support?",
         answer:
           "You don't need to wait for a crisis. Exploring structured communication guides or speaking with a relationship counselor early helps keep small misunderstandings from growing into long-term distance.",
+      },
+    ],
+  },
+  {
+    title: "Sleep Issues & Restorative Rest",
+    description:
+      "How consistent sleep rhythms support mood, patience, and everyday energy.",
+    items: [
+      {
+        question: "How does poor sleep affect daily mood and relationships?",
+        answer:
+          "Sleep debt elevates evening cortisol and lowers emotional patience while draining physical energy. Consistent wake times, cool room temperatures, and screen-free wind-down cues rapidly improve rest.",
+      },
+      {
+        question: "When should persistent sleep issues be evaluated?",
+        answer:
+          "If trouble falling or staying asleep lasts longer than a month or involves loud snoring and daytime exhaustion, consult a healthcare professional.",
+      },
+    ],
+  },
+  {
+    title: "Stress, Tension & Pain Management",
+    description:
+      "Simple nervous-system resets and mobility habits for everyday relief.",
+    items: [
+      {
+        question: "What is a quick way to release daily stress and tension?",
+        answer:
+          "A 60-second physiological sigh (two quick nasal inhales followed by a long slow exhale) paired with a short walk or screen-free break helps calm an overactive stress response.",
+      },
+      {
+        question: "What helps ease everyday lower-back stiffness or discomfort?",
+        answer:
+          "Taking short movement breaks every 45 minutes of sitting, gentle daily mobility stretches, and supportive sleep posture reduce muscular guarding. Sudden radiating pain or numbness should always be evaluated by a doctor.",
       },
     ],
   },

@@ -177,7 +177,7 @@ export function HomeLanding() {
         </StaggerContainer>
       </section>
 
-      {/* 3. "What Can We Help You With?" 6-Card Grid */}
+      {/* 3. "What Can We Help You With?" 4-Card Single-Row Grid */}
       <section id="topics" className="mx-auto max-w-6xl px-5 sm:px-8 pt-14 sm:pt-16 pb-12">
         <FadeInUp>
           <div className="flex items-center gap-4 sm:gap-6 mb-9">
@@ -191,21 +191,21 @@ export function HomeLanding() {
 
         <StaggerContainer
           staggerDelay={0.07}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
         >
           {WELLNESS_TOPICS.map((topic) => {
             const href = getTopicHref(topic.slug);
             const external = isExternalHref(href);
             const cardClassName =
-              "group block overflow-hidden rounded-2xl border border-[#E9DFF2] bg-white shadow-[0_8px_24px_-12px_rgba(67,16,89,0.14)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#CFB6E6] hover:shadow-[0_22px_42px_-14px_rgba(67,16,89,0.24)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5D177E]";
+              "group flex h-full flex-col overflow-hidden rounded-2xl border border-[#E9DFF2] bg-white shadow-[0_8px_24px_-12px_rgba(67,16,89,0.14)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#CFB6E6] hover:shadow-[0_22px_42px_-14px_rgba(67,16,89,0.24)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5D177E]";
             const cardInner = (
               <>
-                <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#F3ECF9]">
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#F3ECF9]">
                   <Image
                     src={topic.image}
                     alt={topic.imageAlt}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                   />
                   {/* Organic pulsing coral focal glow for Pain Management */}
@@ -218,7 +218,7 @@ export function HomeLanding() {
                         repeat: Infinity,
                         ease: "easeInOut",
                       }}
-                      className="pointer-events-none absolute left-1/2 top-[56%] h-24 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(239,68,68,0.58)_0%,rgba(239,68,68,0.2)_45%,transparent_72%)] blur-[2px]"
+                      className="pointer-events-none absolute left-1/2 top-[56%] h-20 w-20 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(239,68,68,0.58)_0%,rgba(239,68,68,0.2)_45%,transparent_72%)] blur-[2px]"
                     />
                   )}
                   {/* Subtle bottom gradient for pill separation */}
@@ -229,11 +229,11 @@ export function HomeLanding() {
                 </div>
 
                 {/* Floating overlapping white pill label */}
-                <div className="relative z-10 mx-4 -mt-5 mb-3.5 flex items-center justify-center gap-1.5 rounded-xl border border-[#ECE4F4] bg-white/95 px-4 py-2.5 shadow-[0_6px_16px_-4px_rgba(45,10,64,0.12)] backdrop-blur-xs transition-all duration-300 group-hover:-translate-y-0.5 group-hover:border-[#D4BEE8] group-hover:shadow-md">
-                  <span className="font-display text-[0.98rem] font-bold text-[#1F1A24] transition-colors group-hover:text-[#5D177E]">
+                <div className="relative z-10 mx-3 -mt-5 mb-3 flex items-center justify-center gap-1.5 rounded-xl border border-[#ECE4F4] bg-white/95 px-3 py-2.5 shadow-[0_6px_16px_-4px_rgba(45,10,64,0.12)] backdrop-blur-xs transition-all duration-300 group-hover:-translate-y-0.5 group-hover:border-[#D4BEE8] group-hover:shadow-md">
+                  <span className="font-display whitespace-nowrap text-[0.92rem] font-bold text-[#1F1A24] transition-colors group-hover:text-[#5D177E]">
                     {topic.title}
                   </span>
-                  <ArrowRight className="h-3.5 w-3.5 text-[#5D177E] opacity-0 -translate-x-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
+                  <ArrowRight className="h-3.5 w-3.5 shrink-0 text-[#5D177E] opacity-0 -translate-x-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
                 </div>
               </>
             );

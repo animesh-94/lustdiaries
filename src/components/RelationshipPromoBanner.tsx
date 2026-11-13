@@ -46,24 +46,24 @@ function LotusWellnessIcon({ className }: { className?: string }) {
 
 const MINI_TILES = [
   {
-    slug: "intimate-wellness",
-    label: "Intimate Wellness",
+    slug: "relationship-issues",
+    label: "Relationship Issues",
     icon: Heart,
   },
   {
     slug: "sleep-issues",
-    label: "Sleep Health",
+    label: "Sleep Issues",
     icon: BedDouble,
-  },
-  {
-    slug: "pain-management",
-    label: "Pain Management",
-    icon: ShieldPlus,
   },
   {
     slug: "stress-and-tension",
     label: "Stress & Tension",
     icon: LotusWellnessIcon,
+  },
+  {
+    slug: "pain-management",
+    label: "Pain Management",
+    icon: ShieldPlus,
   },
 ];
 

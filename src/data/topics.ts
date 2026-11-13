@@ -25,11 +25,9 @@ export interface WellnessTopic {
 }
 
 export const TOPIC_REDIRECT_URLS: Record<string, string> = {
-  "erectile-dysfunction": "https://staminnite.com/mens-health/",
   "sleep-issues": "https://staminnite.com/sleeping-pills/",
   "stress-and-tension": "https://staminnite.com/wakefulness/",
   "pain-management": "https://staminnite.com/pain-killers/",
-  "intimate-wellness": "https://staminnite.com/mens-health/",
 };
 
 export function getTopicHref(slug: string): string {
@@ -42,54 +40,54 @@ export function isExternalHref(href: string): boolean {
 
 export const WELLNESS_TOPICS: WellnessTopic[] = [
   {
-    slug: "erectile-dysfunction",
-    title: "Erectile Dysfunction",
-    shortTagline: "Judgment-free guidance on vascular health, confidence, and partner support.",
-    image: "/images/topic-ed.jpg",
-    imageAlt: "Couple sitting warmly together holding hands in supportive conversation",
+    slug: "relationship-issues",
+    title: "Relationship Issues",
+    shortTagline: "Strengthen communication, repair trust, and navigate rough patches with empathy.",
+    image: "/images/topic-relationship.jpg",
+    imageAlt: "Couple sitting side by side looking at a golden sunset over calm ocean waves",
     readTime: "6 min read",
     summary:
-      "Occasional difficulty achieving or maintaining an erection is far more common than most people realize. Understanding the physical, hormonal, and emotional factors behind it helps remove stigma and points toward practical, evidence-informed solutions.",
+      "Every lasting relationship moves through seasons of distance, miscommunication, or external strain. Learning how to listen without defensiveness and repair after conflict turns friction into deeper understanding.",
     keyTakeaways: [
-      "Cardiovascular health, sleep quality, and stress hormones all directly affect blood flow and arousal.",
-      "Performance anxiety often creates a self-reinforcing loop that open partner communication can break.",
-      "Consistent lifestyle adjustments and clinician-guided options offer safe, effective pathways forward.",
+      "Healthy couples aren't conflict-free—they are skilled at repairing quickly after misunderstandings.",
+      "Speaking from personal feelings ('I feel...') keeps partners out of defensive cycles.",
+      "Small daily bids for attention matter more than rare grand gestures.",
     ],
     sections: [
       {
-        heading: "Understanding Common Root Causes",
-        body: "Erectile function relies on coordinated signaling between the brain, nerves, hormones, and blood vessels. Disruption in any single link—from chronic fatigue to elevated blood pressure or everyday performance worry—can change responsiveness.",
+        heading: "Breaking Unhelpful Conflict Loops",
+        body: "When couples feel unheard, conversations quickly escalate into criticism or quiet withdrawal. Slowing the tempo helps both people feel safe enough to be honest.",
         bullets: [
-          "Circulatory and metabolic factors such as blood pressure, cholesterol, or glucose balance",
-          "Psychological load including work stress, anxiety, or fear of disappointing a partner",
-          "Medication side effects, alcohol intake, or disrupted restorative sleep",
+          "Notice when heart rates spike and take a mutually agreed 20-minute reset break",
+          "Replace 'you always/never' generalizations with concrete, present-tense feelings",
+          "Listen to understand your partner's underlying need before crafting a rebuttal",
         ],
       },
       {
-        heading: "Supportive Steps You Can Start Today",
-        body: "Small daily shifts often create measurable improvements in energy, mood, and vascular responsiveness before or alongside medical care.",
+        heading: "Rebuilding Daily Emotional Connection",
+        body: "Trust and warmth grow through consistent small moments of showing up.",
         bullets: [
-          "Prioritize 30 minutes of brisk walking or resistance training four times a week to support nitric oxide circulation.",
-          "Shift focus during intimacy from rigid expectations toward relaxed touch and unhurried connection.",
-          "Speak openly with a licensed healthcare professional to rule out underlying cardiovascular or hormonal factors.",
+          "Practice a 10-minute daily check-in about stress outside the relationship.",
+          "Express specific appreciation for small thoughtful actions every day.",
+          "Consider couples guidance proactively—not only as a last resort.",
         ],
       },
     ],
     faqs: [
       {
-        question: "Is occasional erectile difficulty normal?",
+        question: "Is arguing a sign that a relationship is failing?",
         answer:
-          "Yes. Stress, exhaustion, alcohol, or distraction can cause temporary changes at any age. Persistent patterns lasting several weeks are worth discussing calmly with a healthcare provider.",
+          "Not necessarily. Disagreements are normal when two people share a life; what predicts long-term strength is mutual respect and willingness to repair afterward.",
       },
       {
-        question: "How can partners help without adding pressure?",
+        question: "What can we do when we feel like roommates?",
         answer:
-          "Reassurance, patience, and keeping physical affection relaxed—without treating every touch as a performance test—dramatically eases performance anxiety.",
+          "Reintroduce novelty and dedicated one-on-one time without logistics talk—even a 30-minute evening walk or coffee date shifts energy.",
       },
       {
-        question: "When should I consult a doctor?",
+        question: "When is couples counseling helpful?",
         answer:
-          "If changes persist for more than a few weeks, appear suddenly, or coincide with fatigue or chest discomfort, a routine medical checkup is a smart and confidential step.",
+          "Anytime you feel stuck repeating the same argument or want neutral communication tools before resentment builds.",
       },
     ],
   },
@@ -247,110 +245,6 @@ export const WELLNESS_TOPICS: WellnessTopic[] = [
         question: "When should pain be evaluated by a doctor immediately?",
         answer:
           "Seek prompt medical care if back pain follows a fall, causes numbness or tingling down the legs, or comes with fever or unexplained weakness.",
-      },
-    ],
-  },
-  {
-    slug: "intimate-wellness",
-    title: "Intimate Wellness",
-    shortTagline: "Build comfort, body confidence, and unhurried physical connection together.",
-    image: "/images/topic-intimacy.jpg",
-    imageAlt: "Smiling couple sitting together on a sofa having an open warm conversation",
-    readTime: "5 min read",
-    summary:
-      "Intimate wellness is about far more than mechanics—it combines physical comfort, curiosity, emotional safety, and honest dialogue free from embarrassment or rigid comparisons.",
-    keyTakeaways: [
-      "Responsive desire—warmth that builds after connection starts—is completely normal.",
-      "Comfort, hydration, and unhurried pacing dramatically improve physical ease.",
-      "Checking in calmly outside the bedroom makes intimate conversations far easier.",
-    ],
-    sections: [
-      {
-        heading: "Rethinking Desire & Physical Comfort",
-        body: "Many healthy adults experience responsive rather than spontaneous desire—meaning interest grows once emotional safety, relaxation, and gentle touch are already present.",
-        bullets: [
-          "Release the myth that physical intimacy must look effortless or identical every time",
-          "Pay attention to comfort essentials like gentle lubrication, breath, and pacing",
-          "Notice how energy, hormones, and life seasons naturally shift rhythms",
-        ],
-      },
-      {
-        heading: "Keeping Curiosity Alive as a Couple",
-        body: "Small intentional rituals protect closeness even during busy work and family weeks.",
-        bullets: [
-          "Share non-demanding physical affection—longer hugs, shoulder rubs, or holding hands.",
-          "Talk about what feels good using positive, specific language rather than guesswork.",
-          "Protect dedicated screen-free evenings to reconnect without rushing.",
-        ],
-      },
-    ],
-    faqs: [
-      {
-        question: "Why do partners sometimes have mismatched desire?",
-        answer:
-          "Differences in stress levels, sleep, hormones, and responsive vs. spontaneous desire are normal in long-term couples. Curious, blame-free dialogue helps bridge the gap.",
-      },
-      {
-        question: "How do we start talking about intimacy without awkwardness?",
-        answer:
-          "Start during a calm everyday moment—like a walk—framing the conversation around closeness and what you'd enjoy exploring more of together.",
-      },
-      {
-        question: "Can physical discomfort during intimacy be addressed?",
-        answer:
-          "Yes. Discomfort is never something to simply push through; a gynecologist, urologist, or pelvic-health specialist can provide tailored, effective relief.",
-      },
-    ],
-  },
-  {
-    slug: "relationship-issues",
-    title: "Relationship Issues",
-    shortTagline: "Strengthen communication, repair trust, and navigate rough patches with empathy.",
-    image: "/images/topic-relationship.jpg",
-    imageAlt: "Couple sitting side by side looking at a golden sunset over calm ocean waves",
-    readTime: "6 min read",
-    summary:
-      "Every lasting relationship moves through seasons of distance, miscommunication, or external strain. Learning how to listen without defensiveness and repair after conflict turns friction into deeper understanding.",
-    keyTakeaways: [
-      "Healthy couples aren't conflict-free—they are skilled at repairing quickly after misunderstandings.",
-      "Speaking from personal feelings ('I feel...') keeps partners out of defensive cycles.",
-      "Small daily bids for attention matter more than rare grand gestures.",
-    ],
-    sections: [
-      {
-        heading: "Breaking Unhelpful Conflict Loops",
-        body: "When couples feel unheard, conversations quickly escalate into criticism or quiet withdrawal. Slowing the tempo helps both people feel safe enough to be honest.",
-        bullets: [
-          "Notice when heart rates spike and take a mutually agreed 20-minute reset break",
-          "Replace 'you always/never' generalizations with concrete, present-tense feelings",
-          "Listen to understand your partner's underlying need before crafting a rebuttal",
-        ],
-      },
-      {
-        heading: "Rebuilding Daily Emotional Connection",
-        body: "Trust and warmth grow through consistent small moments of showing up.",
-        bullets: [
-          "Practice a 10-minute daily check-in about stress outside the relationship.",
-          "Express specific appreciation for small thoughtful actions every day.",
-          "Consider couples guidance proactively—not only as a last resort.",
-        ],
-      },
-    ],
-    faqs: [
-      {
-        question: "Is arguing a sign that a relationship is failing?",
-        answer:
-          "Not necessarily. Disagreements are normal when two people share a life; what predicts long-term strength is mutual respect and willingness to repair afterward.",
-      },
-      {
-        question: "What can we do when we feel like roommates?",
-        answer:
-          "Reintroduce novelty and dedicated one-on-one time without logistics talk—even a 30-minute evening walk or coffee date shifts energy.",
-      },
-      {
-        question: "When is couples counseling helpful?",
-        answer:
-          "Anytime you feel stuck repeating the same argument or want neutral communication tools before resentment builds.",
       },
     ],
   },
