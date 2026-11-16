@@ -9,6 +9,7 @@ import { TopicFaqAccordion } from "@/components/TopicFaqAccordion";
 import { FadeInUp } from "@/components/MotionPrimitives";
 import { RelationshipPromoBanner } from "@/components/RelationshipPromoBanner";
 import { WellnessResourcesSidebar } from "@/components/WellnessResourcesSidebar";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export async function generateStaticParams() {
   return WELLNESS_TOPICS.map((topic) => ({ slug: topic.slug }));
@@ -28,15 +29,10 @@ export async function generateMetadata({
   return {
     title: topic.title,
     description: topic.shortTagline,
+    alternates: { canonical: `/topics/${topic.slug}` },
     robots: {
-      index: false,
-      follow: false,
-      nocache: true,
-      googleBot: {
-        index: false,
-        follow: false,
-        noimageindex: true,
-      },
+      index: true,
+      follow: true,
     },
   };
 }
@@ -65,13 +61,22 @@ export default async function TopicDetailPage({
         {/* Main Editorial Article Column */}
         <article className="lg:col-span-8 min-w-0">
           <FadeInUp immediate>
-            <Link
-              href="/#topics"
-              className="inline-flex items-center gap-2 rounded-full border border-[#E4D7EE] bg-white px-4 py-1.5 text-sm font-medium text-[#5D177E] shadow-2xs transition hover:bg-[#F3ECF9]"
-            >
-              <ArrowLeft className="h-3.5 w-3.5" />
-              Back to All Topics
-            </Link>
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <Breadcrumbs
+                items={[
+                  { label: "Home", href: "/" },
+                  { label: "Topics", href: "/#topics" },
+                  { label: topic.title },
+                ]}
+              />
+              <Link
+                href="/#topics"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#5D177E] transition hover:text-[#431059]"
+              >
+                <ArrowLeft className="h-3.5 w-3.5" />
+                All Topics
+              </Link>
+            </div>
 
             <div className="mt-6 flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-wider text-[#6A5A78]">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-[#F3ECF9] px-3 py-1 text-[#4E1668]">

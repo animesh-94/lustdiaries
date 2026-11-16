@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   title: "Contact Us",
   description:
     "Reach the LustDiaries editorial, privacy, or advertising partnerships team privately.",
+  alternates: { canonical: "/contact" },
+  robots: { index: true, follow: true },
 };
 
 export default function ContactPage() {

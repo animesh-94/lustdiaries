@@ -1,9 +1,11 @@
+import { Suspense } from "react";
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { MotionProvider } from "@/components/MotionPrimitives";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SITE_URL } from "@/lib/site";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
@@ -26,6 +28,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "LustDiaries — Take Control of Your Health & Relationships",
     template: "%s | LustDiaries",
@@ -58,7 +61,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col bg-[#FDFBFE] text-[#1F1A24] selection:bg-[#5D177E]/15 selection:text-[#431059]">
         <MotionProvider>
-          <Navbar />
+          <Suspense fallback={<div className="h-16 sm:h-[72px]" />}>
+            <Navbar />
+          </Suspense>
           <main className="flex-1">{children}</main>
           <Footer />
         </MotionProvider>

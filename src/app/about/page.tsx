@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "Learn about LustDiaries—our mission to make intimacy, sleep, stress, and relationship wellness approachable and judgment-free.",
+  alternates: { canonical: "/about" },
+  robots: { index: true, follow: true },
 };
 
 const VALUES = [

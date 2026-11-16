@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: "Medical Disclaimer",
   description:
     "Important medical information notice explaining the educational nature of LustDiaries content.",
+  alternates: { canonical: "/medical-disclaimer" },
+  robots: { index: true, follow: true },
 };
 
 export default function MedicalDisclaimerPage() {

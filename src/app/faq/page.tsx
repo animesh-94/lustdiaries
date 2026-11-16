@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   title: "Frequently Asked Questions",
   description:
     "Clear, judgment-free answers about LustDiaries privacy, wellness guides, intimacy, sleep, stress, pain relief, and relationship support.",
+  alternates: { canonical: "/faq" },
+  robots: { index: true, follow: true },
 };
 
 interface FaqCategory {
